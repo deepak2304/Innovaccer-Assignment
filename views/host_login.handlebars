@@ -1,0 +1,44 @@
+{{#if errors}}
+{{#each errors}}
+<br>
+<div class="alert alert-danger">
+{{message}}
+</div>
+{{/each}}
+{{/if}}
+
+{{#if success_message}}
+<br>
+<div class="alert alert-success">
+{{success_message}}
+</div>
+{{/if}}
+
+{{#if error}}
+<br>
+<div class="alert alert-danger">
+{{error}}
+</div>
+{{/if}}
+
+
+<div class="card card-register mx-auto mt-5">
+    <div class="card-header">Host Login Form</div>
+    <div class="card-body">
+        <form action="/host_login" method="post" enctype="application/x-www-form-urlencoded">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input required name="email" class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">  
+                <label for="exampleInputPassword1">Password</label>
+                <input required name="password" class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">   
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        <div class="text-center">
+            <a class="d-block small mt-3" href="/host_register">Host Registration</a>
+            <a class="d-block small" href="/">User Check-in</a>
+        </div>
+    </div>
+</div>

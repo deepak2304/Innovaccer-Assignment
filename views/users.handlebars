@@ -1,0 +1,73 @@
+
+{{#if errors}}
+{{#each errors}}
+<br>
+<div class="alert alert-danger">
+{{message}}
+</div>
+{{/each}}
+{{/if}}
+
+{{#if success_message}}
+<br>
+<div class="alert alert-success">
+{{success_message}}
+</div>
+{{/if}}
+
+
+{{#if error}}
+<br>
+<div class="alert alert-danger">
+{{error}}
+</div>
+{{/if}}
+
+
+
+<br>
+
+{{#if users}}
+<h3>All Checked-in Users</h3>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Contact no.</th>
+      <th scope="col">Check-in time</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <td>{{name}}</td>
+      <td>{{email}}</td>
+      <td>{{phone}}</td>
+      <td>{{checkin}}</td>
+      <td>
+        <form action="/users/{{_id}}?_method=DELETE" method="post" enctype="multipart/form-data">
+        <button type="submit" class="btn btn-danger" style="cursor:pointer">Checkout</button>
+        </form>
+      </td>  
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{else}}
+
+<h3>No Users Checked-in</h3>
+
+{{/if}}
+
+<!--
+
+<form action="/host_logout" method="get" enctype="multipart/form-data">
+<button type="submit" class="btn btn-danger" style="cursor:pointer">Host Logout</button>
+</form>
+-->
+
+<button class="btn btn-danger" style="cursor:pointer"><a href="/host_logout" style="text-decoration:none;color:white">Host Logout</a></button>
