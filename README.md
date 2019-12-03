@@ -25,9 +25,8 @@
 <br><br><br>
  - `index.js` is the file that contains all the routes of application.
  - to send emails to the host and user (when a user checks-in and
-   checks-out), you will have to put your email address and password at some places in `index.js` (see attached pictures in repository) and turn on the access for less secure apps (when you are checking the functioning of my application).
- - you will have to use your Gmail account to check the functioning of
-   my application.
+   checks-out), you will have to put your email address and password at some places in `index.js` (see attached pictures in repository) and turn on the access for less secure apps (when you are checking the functioning of application).
+ - you will have to use your Gmail account to check the functioning of application.
 
 
 
